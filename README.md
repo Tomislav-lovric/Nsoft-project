@@ -32,28 +32,6 @@ Users can also look up stake limits.
 
 Used to send ticket where users have to provide their device_id (which they can get from login) and stake (which has to be a number > 0 and it can only have 2 decimals). Before sending ticket to database it checks for users status, if everything is ok it will send ticket and return user his status (OK or HOT) if not it will return either error, if someting went wrong that shouldn't have, or status BLOCKED if users sum of stakes went past stake limit.
 
-### Examples
-
-Going to the http://localhost:3000/user/registration and filling in fileds like this:
-
-```
-{
-	"firstName": "testNesto",
-	"lastName": "testNesto",
-	"email": "test12345@gmail.com",
-	"password": "test1234",
-	"repeatedPassword": "test1234"
-}
-```
-
-will return:
-
-```
-{
-    "message": "Invalid password. Password has to have more than 8 and less than 16 characters, it has to contain at least on number and one special character"
-}
-```
-
 ## Author
 
 * **Tomislav Lovrić** - https://github.com/Tomislav-lovric
