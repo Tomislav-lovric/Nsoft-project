@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "75ce2318-7dbe-405a-9f2a-ff5158a2e73e",
+		"name": "Stake_Limit_Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/user/registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"firstName\": \"testNesto\",\r\n\t\"lastName\": \"testNesto\",\r\n\t\"email\": \"test12345@gmail.com\",\r\n\t\"password\": \"test.1234\",\r\n\t\"repeatedPassword\": \"test.1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"registration"
+					]
+				},
+				"description": "Fields: firstName, lastName, email, password, repeatedPassword"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test1234@gmail.com\",\r\n\t\"password\": \"test.1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				},
+				"description": "Fields: email, password"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ticket/getLimit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/ticket/getLimit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ticket",
+						"getLimit"
+					]
+				},
+				"description": "Fetches stake limits from db"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ticket/setLimit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"time_duration\": 1800,\r\n    \"stake_limit\": 999,\r\n    \"hot_percentage\": 80,\r\n    \"restriction_expires\": 600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/ticket/setLimit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ticket",
+						"setLimit"
+					]
+				},
+				"description": "fields: time_duration, stake_limit, hot_percentage, restriction_expires"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/ticket/newticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"device_id\": \"5193f4c7-5ec0-47fe-847e-d8a0d1bab30c\",\r\n    \"stake\": \"110.55\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/ticket/newticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ticket",
+						"newticket"
+					]
+				},
+				"description": "Fields: device_id, stake"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
