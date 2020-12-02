@@ -12,6 +12,17 @@ XAMPP
 POSTMAN
 ```
 
+
+Modules:
+
+```
+express
+mysql
+bcrypt
+uuid
+nodemon
+```
+
 ## Launching the app
 
 You need to launch Apache and MYSql in XAMPP, then start the app (use npm start in terminal in VS code) and then to create user, send ticket, etc. use the Postman to send data (json).
